@@ -1,26 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello World</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* full screen height */
-            background-color: #f0f8ff; /* light background */
-            margin: 0;
-        }
-        h1 {
-            color: #0099ff; /* orange-red text */
-            font-family: Arial, sans-serif;
-            font-size: 3rem;
-        }
-    </style>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
+<html>
+    <head>
+        <title>SIGN UP</title>
+    </head>
+    <body>
+    
+        <label>Sign up</label><br>
+        <label>Username</label>
+        <input class="username" type="text" id="uname" placeholder="Enter username"><br>
+        <label>Password</label><br>
+        <input type="password" type="password" id="pass" placeholder="Enter password"><br>
+        <br>
+        <input class="signup" type="loginform" onclick="login()" placeholder="login" button="btn btn-primary">
+        <script>
+            function login(){
+                var uname=document.getElementById("uname").value;
+                var pass=document.getElementById("pass").value;
+                if(uname=='admin' && pass=='admin'){
+                    alert("SUCCESS");
+                    window.location.href = "welcome.html";
+                    window.location.assign("welcome.html");
+                    window.location.replace("welcome.html");
+                    window.open("welcome.html");
+                    window.location = "welcome.html";
+                    
+                }
+                else{
+                    alert("Invalid Username and Password");
+                }
+            }
+        </script>
+    </body>
 </html>
+
 
